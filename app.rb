@@ -6,6 +6,11 @@ class App < Sinatra::Base
     erb :home
   end
 
+
+  get '/home' do
+    redirect to('/')
+  end
+
   get '/rainbow' do
       "Hello World"
     end
