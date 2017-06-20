@@ -6,6 +6,10 @@ class App < Sinatra::Base
     erb :home
   end
 
+  get '/youtube' do
+    erb :youtube
+  end
+
   post '/subscribe' do
     @full_name = params[:full_name]
     @email = params[:email]
@@ -18,13 +22,15 @@ class App < Sinatra::Base
   end
 
   get '/reddit' do
+    erb :reddit
+  end
+
     # TODO: we can probably get the listings with something like:
     # JSON.parse(RestClient.get('http://reddit.com/.json'))
 
-    @listings = []
+    # @listings = []
 
-    erb :reddit
-  end
+
 
   get '/team' do
     erb :team
