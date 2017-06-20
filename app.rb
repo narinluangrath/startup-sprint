@@ -6,9 +6,6 @@ class App < Sinatra::Base
     erb :home
   end
 
-  get '/rainbow' do
-    'Hello World!'
-  end
 
   post '/subscribe' do
     @full_name = params[:full_name]
