@@ -15,4 +15,10 @@
       <% end %>
     </ol>
   </div>
-</div>
+    <div class="column">
+      <h3>Day After Tomorrow</h3>
+      <ol>
+        <% @day_after.each do |item| %>
+        <li><%= item.first %>: <%= item.last %></li>
+        <% end %>
+    </div>
