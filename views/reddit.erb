@@ -1,0 +1,4 @@
+<% @listings.each do |listing| %>
+  <h3> <%= listing['title'] %> </h3>
+  <img height="70" width="70" src= <%= listing['pic'] %>/>
+<% end %>

@@ -27,11 +27,19 @@ class App < Sinatra::Base
     erb :subscribe
   end
 
+
   get '/reddit' do
-    # TODO: we can probably get the listings with something like:
-    # JSON.parse(RestClient.get('http://reddit.com/.json'))
+    require 'json'
+    require 'rest-client'
+    x = JSON.parse(RestClient.get('http://reddit.com/.json'))
 
     @listings = []
+    for i in 0..2
+      title = x['data']['children'][i]['data']['title']
+      pic = x['data']['children'][i]['data']['preview']['images'][0]['source']['url']
+      entry = {'title' => title, 'pic' => pic}
+      @listings << entry
+    end
 
     erb :reddit
   end
