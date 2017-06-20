@@ -7,6 +7,7 @@
     <link rel="icon" href="https://pbs.twimg.com/profile_images/477160049958084610/m2EEzWtm.jpeg">
     <link rel="stylesheet" href="stylesheets/normalize.css">
     <link rel="stylesheet" href="stylesheets/main.css">
+    <script src="javascripts/konami.js"/>
   </head>
   <body>
 
@@ -15,10 +16,11 @@
 <p> Credit: team Narin </p>
 <p> Flatiron 2017 </p>
  </div>
-    <!--[if lt IE 8]>
-      <p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
 
     <%= yield %>
+
+    <script type="text/javascript">
+      document.body.addEventListener("keydown", onKeyDownHandler);
+    </script>
   </body>
 </html>
