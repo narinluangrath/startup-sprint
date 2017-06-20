@@ -26,6 +26,10 @@ class App < Sinatra::Base
     erb :reddit
   end
 
+  get '/team' do
+    erb :team
+  end
+
   get '/schedule' do
     @today = [
       ['7:00am', 'Wake up'],
