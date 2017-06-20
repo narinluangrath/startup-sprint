@@ -5,3 +5,28 @@
 .column {
   float: left;
 }
+.box {
+  width: 100%;
+  height: 100px;
+}
+#red{
+  background-color: red;
+}
+#orange{
+  background-color: orange;
+}
+#yellow {
+  background-color: yellow;
+}
+#green {
+  background-color: green;
+}
+#blue {
+  background-color: blue;
+}
+#indigo {
+  background-color: darkblue;
+}
+#violet {
+  background-color: purple;
+}

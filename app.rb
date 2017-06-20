@@ -12,7 +12,7 @@ class App < Sinatra::Base
   end
 
   get '/rainbow' do
-      "Hello World"
+      erb :rainbow
     end
 
   post '/subscribe' do
