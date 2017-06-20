@@ -6,6 +6,10 @@ class App < Sinatra::Base
     erb :home
   end
 
+  get '/rainbow' do
+    'Hello World!'
+  end
+
   post '/subscribe' do
     @full_name = params[:full_name]
     @email = params[:email]
@@ -60,7 +64,7 @@ class App < Sinatra::Base
       ['3:00pm', 'Coffee Time'],
       ['6:30pm', 'Meetup Presentation'],
     ]
-    
+
     erb :schedule
   end
 end
